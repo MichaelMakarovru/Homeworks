@@ -1,4 +1,4 @@
-package lv.sda.module1_introduction_to_java.lesson1_2020_09_12;
+package module1_introduction_to_java.lesson1_2020_09_12;
 
 //Print Hello World in one line.
 

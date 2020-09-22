@@ -1,4 +1,4 @@
-package module2_java_fundamentals.lesson1;
+package module2_java_fundamentals.lesson1.naming;
 
 //Name of a class starts with capital letter. CamelCase is used.
 public class VariableNaming {

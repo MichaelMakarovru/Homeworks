@@ -1,4 +1,4 @@
-package module2_java_fundamentals.lesson1;
+package module2_java_fundamentals.lesson1.string;
 
 public class StringExample {
 

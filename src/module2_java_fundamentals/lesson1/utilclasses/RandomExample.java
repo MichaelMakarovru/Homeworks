@@ -1,4 +1,4 @@
-package module2_java_fundamentals.lesson1;
+package module2_java_fundamentals.lesson1.utilclasses;
 //Don't forget to import Random class
 import java.util.Random;
 

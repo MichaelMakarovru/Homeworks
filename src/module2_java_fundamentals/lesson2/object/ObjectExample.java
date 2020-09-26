@@ -20,8 +20,11 @@ public class ObjectExample {
 //        System.out.println(person == person2);
 //        System.out.println();
 
-        System.out.println(person.equals(person2));
+        boolean equals = person.equals(person2);
+        System.out.println(equals);
         System.out.println();
+
+        String s = null;
 
         int x = 5;
         int y = 5;

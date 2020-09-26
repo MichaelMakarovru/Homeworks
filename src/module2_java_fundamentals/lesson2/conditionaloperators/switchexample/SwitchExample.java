@@ -5,10 +5,10 @@ public class SwitchExample {
     public static void main(String[] args) {
 
         int dayOfWeek = 9;
-        if (dayOfWeek == 6) {
-            System.out.println("It's Saturday!");
-        } else if (dayOfWeek == 7) {
+        if (dayOfWeek == 7) {
             System.out.println("It's Sunday!");
+        } else if (dayOfWeek == 6) {
+            System.out.println("It's Saturday!");
         } else if (dayOfWeek == 5) {
             System.out.println("It's Friday");
         } else if (dayOfWeek == 4) {

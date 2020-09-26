@@ -6,17 +6,18 @@ public class TernaryOperatorExample {
 
         int x = 6;
 
-        String result1;
+        String result;
         if (x > 5) {
-            result1 = "x > 5";
+            result = "x > 5";
         } else {
-            result1 = "x <= 5";
+            result = "x <= 5";
         }
-        System.out.println(result1);
+        System.out.println(result);
 
         System.out.println();
 
-        String result = (x > 5) ? "x > 5" : "x <= 5";
+        //we can replace the above code with ternary operator
+        result = (x > 5) ? "x > 5" : "x <= 5";
         System.out.println(result);
     }
 }

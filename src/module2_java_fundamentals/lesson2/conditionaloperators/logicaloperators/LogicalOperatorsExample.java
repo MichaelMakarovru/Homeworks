@@ -4,13 +4,12 @@ public class LogicalOperatorsExample {
 
     public static void main(String[] args) {
 
-
        /*
         & - AND (true if all operands are true)
         && - short-circuit AND
-        | - OR
+        | - OR (true if any of operands is true)
         || - short-circuit OR
-        ^ - XOR
+        ^ - XOR (true only if operands differ)
         ! - NOT
         */
 
@@ -35,26 +34,27 @@ public class LogicalOperatorsExample {
             System.out.println("Bye");
         }
 
+        x = 3;
         if (x > 2 || y < 2) {
             System.out.println("x > 2 || y < 2");
         }
 
-        if (x < 2 || y < 2) {
+        if (x < 2 || y > 2) {
             System.out.println("x < 2 || y < 2");
         }
         System.out.println();
+
         if (x < 2 ^ y > 2) {
             System.out.println("x < 2 XOR y > 2");
         }
         System.out.println();
 
-        x = 1;
+        x = 3;
         boolean xIsGreater = x > 2;
-
         if (!xIsGreater) {
-            System.out.println("x > 2");
-        } else {
             System.out.println("x < 2");
+        } else {
+            System.out.println("x > 2");
         }
     }
 }

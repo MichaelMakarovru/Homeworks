@@ -5,6 +5,7 @@ import java.util.Objects;
 class Person {
 
     private String name;
+    private int age;
 
     public void setName(String name) {
         this.name = name;
@@ -14,11 +15,10 @@ class Person {
         return name;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
+    public boolean equals(Person person) {
+        if (this == person) return true;
+        if (person == null) return false;
+        if (this.age != person.age) return false;
         return Objects.equals(name, person.name);
     }
 

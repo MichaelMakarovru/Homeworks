@@ -61,13 +61,14 @@ public class DateTimeFormatterExample {
         System.out.println(date);
 
         //Parse string 09:30 into a LocalTime
-        LocalTime time = LocalTime.parse("09:30", DateTimeFormatter.ISO_TIME);
+        LocalTime time = LocalTime.parse("09:30");
         System.out.println(time);
 
-        formatter = DateTimeFormatter.ofPattern("hh mm a");
-        time = LocalTime.parse("09 30 AM", formatter);
+        formatter = DateTimeFormatter.ofPattern("HH mm");
+        time = LocalTime.parse("21 30", formatter);
         System.out.println(time);
 
+        //letter 'a' in pattern means you need to specify AM/PM
         formatter = DateTimeFormatter.ofPattern("hh mm a");
         time = LocalTime.parse("09 30 PM", formatter);
         System.out.println(time);

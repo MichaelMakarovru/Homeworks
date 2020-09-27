@@ -25,7 +25,8 @@ public class StringBuilderExample {
         }
         end = System.currentTimeMillis();
         result = (end - start) / 1000;
-        //System.out.println(stringBuilder.toString());
+        String resultString = stringBuilder.toString();
+        System.out.println(resultString);
         System.out.println();
         System.out.println("StringBuilder = " + result);
     }

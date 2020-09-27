@@ -1,4 +1,4 @@
-package module2_java_fundamentals.lesson3.datesandtime.localdate;
+package module2_java_fundamentals.lesson3.datesandtime;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -29,6 +29,7 @@ public class DateTimeFormatterExample {
 
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println(localDateTime);
+        //Format a date output
         DateTimeFormatter formatter
                 = DateTimeFormatter.ofPattern("hh:mm, dd MMMM, yyyy");
         System.out.println(localDateTime.format(formatter));
@@ -38,6 +39,7 @@ public class DateTimeFormatterExample {
                 = DateTimeFormatter.ofPattern("HH:mm, dd MMMM, yyyy");
         System.out.println(localDateTime.format(formatter));
 
+        //Parse string 11 12 2020 into a LocalDate
         formatter = DateTimeFormatter.ofPattern("MM dd yyyy");
         LocalDate date = LocalDate.parse("11 12 2020", formatter);
         System.out.println(date);
@@ -58,6 +60,7 @@ public class DateTimeFormatterExample {
         date = LocalDate.parse("2020 Nov 26", formatter);
         System.out.println(date);
 
+        //Parse string 09:30 into a LocalTime
         LocalTime time = LocalTime.parse("09:30", DateTimeFormatter.ISO_TIME);
         System.out.println(time);
 
@@ -69,6 +72,7 @@ public class DateTimeFormatterExample {
         time = LocalTime.parse("09 30 PM", formatter);
         System.out.println(time);
 
+        //Parse string into a LocalDateTime
         formatter = DateTimeFormatter.ofPattern("MM dd yyyy hh mm a");
         localDateTime = LocalDateTime.parse("11 12 2020 01 30 PM", formatter);
         System.out.println(localDateTime);

@@ -10,6 +10,7 @@ public class KeyWordsExamples {
             x = x + 5;
             System.out.println("i = " + i);
             if (x >= 25) {
+                //break exits the loop
                 break;
             }
         }
@@ -19,6 +20,7 @@ public class KeyWordsExamples {
         for (int i = 0; i < 10; i++) {
             x = x + 1;
             if (x % 2 != 0) {
+                //continue exits only the current step of the loop
                 continue;
             }
             System.out.println("x = " + x);
@@ -36,6 +38,7 @@ public class KeyWordsExamples {
             x = x + 1;
             System.out.println("i = " + i);
             if (x >= 25) {
+                //return exits the loop and the method
                 return x;
             }
         }

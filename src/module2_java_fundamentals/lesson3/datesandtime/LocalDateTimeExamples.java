@@ -1,4 +1,4 @@
-package module2_java_fundamentals.lesson3.datesandtime.localdate;
+package module2_java_fundamentals.lesson3.datesandtime;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -9,6 +9,7 @@ public class LocalDateTimeExamples {
 
     public static void main(String[] args) {
 
+        //LocalDateTime contains both time and date values
         LocalDateTime localDateTime = LocalDateTime.now();
         System.out.println(localDateTime);
 

@@ -12,6 +12,7 @@ public class ObjectArrayExample {
         sarah.setName("Sarah Smith");
         sarah.setAge(29);
 
+        //We can create array of any object
         Person[] personArray = new Person[2];
         personArray[0] = john;
         personArray[1] = sarah;

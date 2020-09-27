@@ -1,4 +1,4 @@
-package module2_java_fundamentals.lesson3.datesandtime.localdate;
+package module2_java_fundamentals.lesson3.datesandtime;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
@@ -9,6 +9,7 @@ public class LocalDateExamples {
 
     public static void main(String[] args) {
 
+        //LocalDate only contains date value
         LocalDate date = LocalDate.now();
         System.out.println(date);
 

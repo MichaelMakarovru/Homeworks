@@ -1,4 +1,4 @@
-package module2_java_fundamentals.lesson3.datesandtime.localdate;
+package module2_java_fundamentals.lesson3.datesandtime;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
@@ -7,6 +7,7 @@ public class LocalTimeExamples {
 
     public static void main(String[] args) {
 
+        //LocalTime only contains time value
         LocalTime time = LocalTime.now();
         System.out.println(time);
 

@@ -3,7 +3,7 @@ package module2_java_fundamentals.lesson4.wrappers;
 public class WrappersExamples {
 
     public static void main(String[] args) {
-
+        //Every primitive data type has a wrapper to use it as object
         byte bytePrimitive = 5;
         Byte byteObject1 = new Byte((byte) 5);
         Byte byteObject2 = 5;

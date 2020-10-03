@@ -3,7 +3,7 @@ package module2_java_fundamentals.lesson4.varargs;
 public class VarargsExamples {
 
     public static void main(String...args) {
-
+        //we can use varargs to allow various number of parameters in the method
         System.out.println(sumNumbers(5, 5, 5, 5, 46, 384, 1));
         System.out.println(concatString("Hello", " ", "World", "!"));
     }

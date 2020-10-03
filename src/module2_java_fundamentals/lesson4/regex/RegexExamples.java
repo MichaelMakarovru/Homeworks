@@ -10,6 +10,7 @@ public class RegexExamples {
         /*
             a - symbol a
             b - symbol b
+            ...
             \t - tab
             \n - new line
             \r - return
@@ -34,29 +35,39 @@ public class RegexExamples {
             x{n,m} - x occurs n times or more util m times
          */
 
+        //input string
         String s = "Jav2a is4 a p3rog5ram5min9g language$";
         System.out.println(s);
+        //remove all digits
         String noDigits = s.replaceAll("\\d", "");
         System.out.println(noDigits);
+        //remove all non digit characters
         String onlyDigits = s.replaceAll("\\D", "");
         System.out.println(onlyDigits);
+        //remove all spaces
         String noSpaces = s.replaceAll("\\s", "");
         System.out.println(noSpaces);
+        //remove all word characters
         String noWordSymbols = s.replaceAll("\\w", "");
         System.out.println(noWordSymbols);
+        //remove all characters except a, p, l
         String apl = s.replaceAll("[^apl]", "");
         System.out.println(apl);
+        //remove all a, p and l occurrences
         String noApl = s.replaceAll("[apl]", "");
         System.out.println(noApl);
+        //remove all characters starting from a to k
         String range = s.replaceAll("[a-k]", "");
         System.out.println(range);
+        //remove all characters
         String any = s.replaceAll(".", "");
         System.out.println(any);
-        System.out.println("===END===");
         System.out.println();
 
+        //using tabulation symbol
         String random = "\tHello";
         System.out.println(random);
+        //add new line symbol to string
         System.out.print(random + "\n");
         System.out.println("Hello");
         System.out.println(random.replaceAll("\t", ""));
@@ -70,10 +81,12 @@ public class RegexExamples {
         System.out.println();
         System.out.println();
 
-
+        //regex to validate eMail address.
         String regex = "\\w+@\\D+\\.\\D{2,3}";
+        //Passing regex to pattern object
         Pattern pattern = Pattern.compile(regex);
 
+        //checking emails with matcher
         String eMail = "john@gmail.com";
         Matcher matcher = pattern.matcher(eMail);
         System.out.println(eMail + " : " + matcher.matches());
@@ -123,6 +136,7 @@ public class RegexExamples {
         System.out.println(eMail + " : " + matcher.matches());
         System.out.println();
 
+        //Regex: string begins with a, then any one character
         regex = "^a.";
         pattern = Pattern.compile(regex);
 
@@ -133,7 +147,7 @@ public class RegexExamples {
         a = "ba";
         matcher = pattern.matcher(a);
         System.out.println(a + " : " + matcher.matches());
-
+        //any characters (one or more) ending with bab
         regex = ".+bab$";
         pattern = Pattern.compile(regex);
 

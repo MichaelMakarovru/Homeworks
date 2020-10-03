@@ -11,7 +11,7 @@ class StaticExamples {
         Person sarah = new Person();
         sarah.setAge(22);
         sarah.setName("Sarah");
-
+        //calling static method
         Person.increasePersonCount();
 
         Person megan = new Person();
@@ -25,6 +25,7 @@ class StaticExamples {
         System.out.println("Megan id = " + megan.getId());
         System.out.println();
 
+        //using static method from Helper class
         String regNumber = "KA - 5684";
         String regNumber2 = "JG -45 56";
         regNumber = Helper.removeSpaces(regNumber);

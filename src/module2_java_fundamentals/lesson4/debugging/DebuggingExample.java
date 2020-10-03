@@ -6,7 +6,7 @@ public class DebuggingExample {
 
         int result = 1;
         result *= 10;
-        result *= 20;
+        result *= 0;
         result *= 30;
         System.out.println(result);
     }

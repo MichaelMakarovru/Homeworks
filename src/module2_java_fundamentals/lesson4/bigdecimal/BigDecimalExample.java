@@ -6,13 +6,14 @@ public class BigDecimalExample {
 
     public static void main(String[] args) {
 
+        //Do not use double or float for currency
         double y = 2.0;
-
         for (int i = 0; i < 5; i++) {
             y += 0.01;
         }
         System.out.println(y);
 
+        //Use BigDecimal for currency, it is precise
         BigDecimal bigDecimal = new BigDecimal("2.0");
         for (int i = 0; i < 5; i++) {
             bigDecimal = bigDecimal.add(new BigDecimal("0.01"));

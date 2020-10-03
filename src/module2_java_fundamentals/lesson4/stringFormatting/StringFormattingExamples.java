@@ -14,6 +14,7 @@ public class StringFormattingExamples {
 
         double x = 3.45793;
         System.out.println(x);
+        //output double with 2 digits after the point
         System.out.format("%.2f", x);
         System.out.println();
 
@@ -21,18 +22,22 @@ public class StringFormattingExamples {
         System.out.println(y + " " + x);
         System.out.format("%d %.2f", y, x);
         System.out.println();
-        System.out.println("-------------");
-        System.out.format("|%5s|%5s|", "float", "int");
         System.out.println();
-        System.out.println("-------------");
-        System.out.format("|%5.2f|%5d|", x, y);
+        //Draw table with format method
+        System.out.println("Draw table");
+        System.out.println("-----------------");
+        System.out.format("|%7s|%7s|", "float", "int");
         System.out.println();
-        System.out.format("|%5.2f|%5d|", x, y);
+        System.out.println("-----------------");
+        System.out.format("|%7.2f|%7d|", 3.45793, 5);
         System.out.println();
-        System.out.format("|%5.2f|%5d|", x, y);
+        System.out.format("|%7.2f|%7d|", 2.4, 98);
         System.out.println();
-        System.out.println("-------------");
+        System.out.format("|%7.2f|%7d|", 5.0, 345);
+        System.out.println();
+        System.out.println("-----------------");
 
+        //align strings
         System.out.println();
         System.out.format("%10s %-10s %s", "Hi", "Hi", "Hi");
         System.out.println();

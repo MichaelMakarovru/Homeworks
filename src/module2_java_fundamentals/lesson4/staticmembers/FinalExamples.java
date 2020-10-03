@@ -4,13 +4,18 @@ public class FinalExamples {
 
     public static void main(String[] args) {
 
+        //we cannot change final variables
         final int x = 5;
         //x++;
 
+        //we can initialize final variable only once
         final int y;
         y = 6;
         //y++;
 
+        //if reference is final
+        // we can change referred object
+        // but we cannot change address reference is pointing to
         final Person john = new Person();
         john.setName("John");
         john.setAge(25);
@@ -18,6 +23,7 @@ public class FinalExamples {
         System.out.println("Age = " + john.getAge());
         john.setAge(26);
         System.out.println("Age = " + john.getAge());
+        //cannot refer to new object, because john is final
         //john = new Person();
 
         Person sarah = new Person();
@@ -28,8 +34,10 @@ public class FinalExamples {
         sarah = new Person();
         System.out.println(sarah);
 
+        //example of using final variable (PI)
         double r = 0.5 * Math.PI;
 
+        //Using static final variable
         System.out.println("Java was created in " + Helper.YEAR_JAVA_CREATED);
         System.out.println("Java was created in " + Helper.YEAR_JAVA_CREATED);
     }

@@ -9,7 +9,6 @@ class Commands {
         git config --global user.email "email@gmail.com" - configure user email
         git config --global --list - list global configs
 
-        git status - display current status of repo.
         git add <file_name> - add file to tracked
         git commit -m "Commit message" - create commit
         git remote add <remote_repo_name, usually origin> <url> - add remote repo
@@ -20,5 +19,7 @@ class Commands {
 
         git pull <remote_repo_name> <remote_repo_branch_name> - pull
             changes from remote repo
+
+        git status - display current status of repo.
      */
 }

@@ -1,0 +1,6 @@
+# Project exclude paths
+/out/
+/.idea
+*.iml
+/src/module1_introduction_to_java/
+/src/module2_java_fundamentals/

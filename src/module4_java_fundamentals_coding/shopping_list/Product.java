@@ -3,7 +3,7 @@ package module4_java_fundamentals_coding.shopping_list;
 class Product {
 
     private String name;
-    private double quantity;
+    private String quantity;
     private String measurementUnits;
     private boolean isBought;
 
@@ -18,11 +18,15 @@ class Product {
         this.name = firstLetter + rest; //Milk
     }
 
-    public double getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(double quantity) {
+    public void setQuantity(String quantity) {
+        quantity = quantity.replaceAll("[^0123456789.,]", "").trim();
+        if (quantity.replaceAll("\\D", "").isEmpty()) {
+            quantity = "0";
+        }
         this.quantity = quantity;
     }
 

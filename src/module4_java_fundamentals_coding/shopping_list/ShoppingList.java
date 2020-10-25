@@ -1,5 +1,7 @@
 package module4_java_fundamentals_coding.shopping_list;
 
+import java.util.Arrays;
+
 class ShoppingList {
 
     private Product[] list = new Product[10];
@@ -16,6 +18,10 @@ class ShoppingList {
 
     public void removeProduct(int productIndex) {
 
+        if (productIndex >= list.length || productIndex < 0) {
+            return;
+        }
+
         for (int i = productIndex; i < currentIndex - 1; i++) {
             list[i] = list[i + 1];
         }
@@ -31,12 +37,16 @@ class ShoppingList {
 
     public void editProduct(int productIndex, Product newProduct) {
 
+        if (productIndex >= list.length || productIndex < 0) {
+            return;
+        }
+
         Product product = list[productIndex];
 
         if (newProduct.getName() != null) {
             product.setName(newProduct.getName());
         }
-        if (newProduct.getQuantity() != 0) {
+        if (newProduct.getQuantity() != null) {
             product.setQuantity(newProduct.getQuantity());
         }
         if (newProduct.getMeasurementUnits() != null) {
@@ -45,10 +55,16 @@ class ShoppingList {
     }
 
     public void markAsBought(int productIndex) {
+        if (productIndex >= list.length || productIndex < 0) {
+            return;
+        }
         list[productIndex].setBought(true);
     }
 
     public void unmarkAsBought(int productIndex) {
+        if (productIndex >= list.length || productIndex < 0) {
+            return;
+        }
         list[productIndex].setBought(false);
     }
 

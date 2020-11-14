@@ -5,7 +5,8 @@ import java.time.LocalDate;
 class Client {
 
     private LocalDate birthDate;
-
+    //We declared birthDate variable as private, so we can control it's value
+    //inside public setter.
     public void setBirthDate(LocalDate date) {
 
         if (null == date || date.isAfter(LocalDate.now())) {

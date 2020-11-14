@@ -11,11 +11,13 @@ final class Dog extends Animal implements Pet {
         System.out.println("Dog hunts ducks.");
     }
 
+    //Override pet() method declared inside Pet interface
     @Override
     public void pet() {
         System.out.println("Dog barks.");
     }
 
+    //Override eat() method declared inside Animal class
     @Override
     public void eat() {
         System.out.println(name + " eats dog's food.");

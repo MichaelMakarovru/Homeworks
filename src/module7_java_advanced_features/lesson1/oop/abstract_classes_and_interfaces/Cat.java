@@ -15,6 +15,7 @@ class Cat extends Animal implements Pet {
         System.out.println("Cat climbs a tree.");
     }
 
+    //Override pet() method declared inside Pet interface
     @Override
     public void pet() {
         System.out.println(name + " purrs.");

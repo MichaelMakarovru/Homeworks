@@ -7,5 +7,10 @@ class Main {
         Person p = new Person();
         p.setGender(Gender.FEMALE);
         System.out.println(p.getGender());
+
+        System.out.println();
+        for (int i = 0; i < Gender.values().length; i++) {
+            System.out.println(Gender.values()[i]);
+        }
     }
 }

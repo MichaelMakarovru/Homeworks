@@ -1,6 +1,6 @@
 package module7_java_advanced_features.lesson2.inner_classes.member_inner;
 
-public class Main {
+class Main {
 
     public static void main(String[] args) {
 

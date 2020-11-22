@@ -1,8 +1,11 @@
 package module7_java_advanced_features.lesson4.functional_programming.streams;
 
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Optional;
 import java.util.function.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 class TerminalOperations {
@@ -82,6 +85,16 @@ class TerminalOperations {
         StringBuilder stringBuilder = stringStream
                 .collect(supplier, consumer1, consumer2);
         System.out.println(stringBuilder.toString());
+        System.out.println();
+
+        //11 Collector
+        List<String> list = Arrays.asList("Cat", "Mouse", "Dog", "Chicken");
+        List<String> filteredList =
+                list.stream()
+                        .filter(s -> s.startsWith("C"))
+                        .collect(Collectors.toList());
+        System.out.println(filteredList.size());
+        System.out.println(filteredList);
     }
 
     private static class IntegerComparator implements Comparator<Integer> {

@@ -4,7 +4,7 @@ import java.util.Random;
 
 class Updater implements Runnable {
 
-    private int lastResult = -1;
+    private static String lastResult = "";
     private CompetitionResultsStorage storage;
     private Random random = new Random();
     private int sleep;
@@ -19,17 +19,19 @@ class Updater implements Runnable {
 
         while (true) {
             try {
+                synchronized (storage) {
+                    String newResult = generateResult();
+                    storage.update(newResult, lastResult);
+                    lastResult = newResult;
+                }
                 Thread.sleep(sleep);
-                Integer newResult = generateResult();
-                storage.update(newResult, lastResult);
-                lastResult = newResult;
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
 
-    private int generateResult() {
-        return random.nextInt(100);
+    private String generateResult() {
+        return random.nextInt(10) + ":" + random.nextInt(10);
     }
 }

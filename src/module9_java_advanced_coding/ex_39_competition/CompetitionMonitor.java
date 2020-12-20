@@ -12,7 +12,7 @@ class CompetitionMonitor {
         ExecutorService service = Executors.newFixedThreadPool(4);
 
         service.submit(new Reader(storage));
-        service.submit(new Updater(storage, 100));
-        service.submit(new Updater(storage, 500));
+        service.submit(new Updater(storage, 2000));
+        service.submit(new Updater(storage, 2000));
     }
 }

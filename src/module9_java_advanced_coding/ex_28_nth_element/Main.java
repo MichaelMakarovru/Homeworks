@@ -13,8 +13,5 @@ class Main {
 
         List<Character> result = elementFinder.find(list, 2, 3);
         System.out.println(result);
-
-//        result = elementFinder.findUsingFunctionalProgramming(list, 2, 3);
-//        System.out.println(result);
     }
 }

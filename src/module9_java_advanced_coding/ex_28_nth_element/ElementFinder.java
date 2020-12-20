@@ -20,12 +20,4 @@ class ElementFinder<T> {
 
         return result;
     }
-
-//    public List<T> findUsingFunctionalProgramming(List<T> list, int start, int step) {
-//
-//        return list
-//                .stream()
-//                .skip(start)
-//                .collect(Collectors.toList());
-//    }
 }

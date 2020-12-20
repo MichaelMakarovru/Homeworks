@@ -5,18 +5,20 @@ import java.util.List;
 
 class CompetitionResultsStorage {
 
-    private List<Integer> results = new ArrayList<>();
+    private List<String> results = new ArrayList<>();
 
-    public void update(Integer newResult, Integer lastResult) {
+    public void update(String newResult, String lastResult) {
         if (!results.isEmpty() && !lastResult.equals(results.get(results.size() - 1))) {
-            throw new RuntimeException("Not verified!");
+            System.out.println("Not verified result received.");
+            System.exit(1);
         }
+        System.out.println("Update received: " + newResult);
         results.add(newResult);
     }
 
-    public Integer readLastResult() {
+    public String readLastResult() {
         if (results.isEmpty()) {
-            return -1;
+            return "No results so far.";
         }
         return results.get(results.size() - 1);
     }

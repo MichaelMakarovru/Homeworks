@@ -10,4 +10,13 @@ class Car {
         this.description = description;
         this.carType = carType;
     }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", carType=" + carType +
+                '}';
+    }
 }
